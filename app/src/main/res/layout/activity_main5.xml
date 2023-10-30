@@ -73,6 +73,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/custom_teks"
             android:layout_marginTop="100dp"
+            android:padding="10dp"
             android:text="Coba"
             android:textColor="@color/black"
             android:textSize="16dp"
