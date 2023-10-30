@@ -30,21 +30,14 @@ class MainActivity : AppCompatActivity() {
         spinner.adapter = adapter
 
         val submitButton = findViewById<Button>(R.id.submit)
-        submitButton.setOnClickListener {
-            // Mengambil nilai yang diisi oleh pengguna dalam EditText
-            val yourName = findViewById<EditText>(R.id.inputnama).text.toString()
+        val edname = findViewById<EditText>(R.id.inputnama)
 
-            // Membuat intent untuk memulai MainActivity2
-            val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra("your_name", yourName) // Mengirim data ke MainActivity2 jika diperlukan
-            startActivity(intent)
-        }
+        var selectedOption: String = "" // Variabel untuk menyimpan pilihan dari Spinner
 
-        // Tambahkan pendengar untuk Spinner
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 // Aksi yang akan diambil saat pilihan dipilih
-                val selectedOption = data[position]
+                selectedOption = data[position] // Simpan pilihan dalam variabel
                 Toast.makeText(applicationContext, "Anda memilih: $selectedOption", Toast.LENGTH_SHORT).show()
             }
 
@@ -53,5 +46,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        submitButton.setOnClickListener {
+            val nama = edname.text.toString()
+
+            // Membuat intent untuk memulai MainActivity2
+            Intent(this, MainActivity2::class.java).also {
+                it.putExtra("EXTRA_NAMA", nama)
+                it.putExtra("EXTRA_SELECTED_OPTION", selectedOption) // Menambahkan data Spinner ke Intent
+                startActivity(it)
+            }
+
+        }
     }
 }
