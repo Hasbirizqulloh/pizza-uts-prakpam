@@ -24,6 +24,7 @@ class MainActivity2 : AppCompatActivity() {
         seeMenus.setOnClickListener {
             Intent(this, MainActivity3::class.java).also {
                 it.putExtra("EXTRA_NAMA", name)
+                it.putExtra("EXTRA_SELECTED_OPTION", lokasi)
                 startActivity(it)
             }
         }

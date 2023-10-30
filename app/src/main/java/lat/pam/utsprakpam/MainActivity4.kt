@@ -19,22 +19,25 @@ class MainActivity4 : AppCompatActivity() {
         val desc = findViewById<TextView>(R.id.textview2)
         val orderButton = findViewById<Button>(R.id.order)
         val backButton = findViewById<Button>(R.id.back)
+
+        // data Intent
         val name = intent.getStringExtra("EXTRA_NAMA")
+        val lokasi = intent.getStringExtra("EXTRA_SELECTED_OPTION")
+        val Ititle = intent.getStringExtra("EXTRA_TITLE")
+        val Iprice = intent.getStringExtra("EXTRA_PRICE")
+        val Idesc = intent.getStringExtra("EXTRA_DESC")
 
-        val image = findViewById<ImageView>(R.id.imageView)
-        val imageResId = intent.getIntExtra("EXTRA_IMAGE_RES_ID", 0)
-
-        if (imageResId != 0) {
-            // Set the image resource in the ImageView
-            image.setImageResource(imageResId)
-        } else {
-            // Handle the case where the image resource ID is not provided in the Intent
-            // You can set a default image or take some other action here.
-        }
+        // Input Data
+        title.text = Ititle
+        price.text = Iprice
+        desc.text = Idesc
 
         orderButton.setOnClickListener {
+
             Intent(this, MainActivity5::class.java).also {
                 it.putExtra("EXTRA_NAMA", name)
+                it.putExtra("EXTRA_SELECTED_OPTION", lokasi)
+                it.putExtra("EXTRA_TITLE", Ititle)
                 startActivity(it)
             }
         }

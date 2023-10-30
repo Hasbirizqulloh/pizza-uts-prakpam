@@ -32,8 +32,8 @@
             android:layout_marginTop="11dp"
             android:layout_marginBottom="9dp"
             android:text="INI ADALAH DATA CHECK OUT"
-            android:textColor="@color/red"
-            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -61,12 +61,22 @@
             android:id="@+id/done"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_button"
             android:layout_marginTop="77dp"
+            android:background="@drawable/custom_button"
             android:elevation="10dp"
             android:text="Done"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_teks"
+            android:layout_marginTop="100dp"
+            android:text="Coba"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:visibility="invisible"/>
 
 
     </LinearLayout>

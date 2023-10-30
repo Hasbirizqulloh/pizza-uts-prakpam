@@ -9,6 +9,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/user"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/user1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/user1"
             android:layout_width="match_parent"
@@ -16,11 +29,13 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:padding="15dp"
+            android:layout_marginLeft="50dp"
             android:textSize="20dp"
             android:text="USER AKU"
             tools:ignore="MissingConstraints" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="409dp"
             android:layout_height="672dp"
             android:layout_marginStart="1dp"
@@ -32,23 +47,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/user1">
+
             <LinearLayout
                 android:id="@+id/makanpizza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="27dp"
                 android:paddingLeft="14dp"
-                android:paddingRight="21dp">
+                android:paddingRight="21dp"
+                android:paddingBottom="27dp">
+
                 <ImageView
                     android:layout_width="121dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/pizza2"/>
+                    android:src="@drawable/pizza2" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:paddingLeft="16dp">
+
                     <TextView
                         android:id="@+id/pitsa"
                         android:layout_width="wrap_content"
@@ -56,109 +75,128 @@
                         android:text="Pepperoni Pizza"
                         android:textColor="#F24448"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/pepeperoni"
                         android:textColor="#F24448"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/makanSpagheti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="27dp"
                 android:paddingLeft="14dp"
-                android:paddingRight="21dp">
+                android:paddingRight="21dp"
+                android:paddingBottom="27dp">
+
                 <ImageView
                     android:layout_width="121dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/spageti"/>
+                    android:src="@drawable/spageti" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:paddingLeft="16dp">
+
                     <TextView
+                        android:id="@+id/tspag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Spaghetti"
                         android:textColor="#F24448"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spageti"
                         android:textColor="#F24448"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/makanBurger"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="27dp"
                 android:paddingLeft="14dp"
-                android:paddingRight="21dp">
+                android:paddingRight="21dp"
+                android:paddingBottom="27dp">
+
                 <ImageView
                     android:layout_width="121dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/burger"/>
+                    android:src="@drawable/burger" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:paddingLeft="16dp">
+
                     <TextView
+                        android:id="@+id/tburg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Burger"
                         android:textColor="#F24448"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/burger"
                         android:textColor="#F24448"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/makanSteak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="27dp"
                 android:paddingLeft="14dp"
-                android:paddingRight="21dp">
+                android:paddingRight="21dp"
+                android:paddingBottom="27dp">
+
                 <ImageView
                     android:layout_width="121dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/steak"/>
+                    android:src="@drawable/steak" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:paddingLeft="16dp">
+
                     <TextView
+                        android:id="@+id/tstea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Steak"
                         android:textColor="#F24448"
                         android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/steak"
                         android:textColor="#F24448"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
